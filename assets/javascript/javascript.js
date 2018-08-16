@@ -17,7 +17,6 @@ $(document).ready(function() {
 
 //fetches gifs from giphy, pushes to html, and creates still/animate toggle
   function fetchGifs () {
-    console.log("fetchGifs ran");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=36a7c06c6a1549e4b4fd0dba9159d4f1&limit=10";
     $.ajax({
       url: queryURL,
@@ -25,8 +24,6 @@ $(document).ready(function() {
       }).done(function(response) {
         $("#animal-view").text(JSON.stringify(response));
         var results = response.data;
-
-
 
         // push to array and push to html with ratings
         for (i=0; i<results.length; i++) {
@@ -68,7 +65,7 @@ $(document).ready(function() {
     //creates dedicated animal gif button
     function createButton () {
       animal = animal.toUpperCase ();
-      $("#animalButtons").append("<button type='button' class='btn btn-primary' id='" + animal.toLowerCase() +"'>" + "See " + animal + " gifs</button>");
+      $("#animalButtons").append("<button type='button' class='btn btn-primary starterGif' id='" + animal.toLowerCase() +"'>" + "See " + animal + " gifs</button>");
       animals.push(animal);
     }
     createButton ();

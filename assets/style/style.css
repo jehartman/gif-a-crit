@@ -33,17 +33,12 @@ footer {
   font-size: .7em;
   text-align: center;
   background-color: #ca6e7b;
-/*  box-shadow: 10px 10px 5px grey;*/
-/*  border-radius: 10px;*/
-/*  position: relative;*/
-/*  bottom: 0;*/
   border-top: 1px solid black;
 }
 
 h1  {
   margin: 5px 30px 0 30px;
   padding: 0 20px 0 20px;
-/*  height: 70px;*/
   text-align: center;
   font-family: 'Russo One', sans-serif;
   font-size: 2em;
@@ -90,9 +85,6 @@ p {
   height: 70px;
   box-shadow: 10px 10px 5px grey;
   border-radius: 10px;
-
-
-/*  z-index: 1;*/
 }
 
 /***********IDs***********/
@@ -102,22 +94,15 @@ p {
   color: black;
 }
 
-#animalButtons {
-  font-size: .8em;
-  margin: 0 20%;
-}
-
 #formDiv {
   min-width: 250px;
 }
 
 #slideshow { 
     margin: auto; 
-/*    position: relative; */
     width: 500px; 
     height: 150px; 
     padding: 10px; 
-
 }
 
 #slideshow > div { 
@@ -125,6 +110,5 @@ p {
     top: 10px; 
     left: 10px; 
     right: 10px; 
-/*    bottom: 10px; */
     z-index: 1;
 }
