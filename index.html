@@ -4,39 +4,57 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Bangers|Fontdiner+Swanky|Gloria+Hallelujah|Indie+Flower" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Righteous|Russo+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/style/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
 	<title>Gif-a-Crit</title>
 </head>
 
-<header>
-
-		<h1>GIF-a-CRIT!</h1>
-			<div id="instructionsDiv">
-		<p class="instructions">Click a button to see gifs. Add new creatures if you want. <br>(It doesn't have to be a creature.)</p>
-		<p class="instructions">Click for action!</p>
-	</div>
-</header>
 <body>
-
-		<div id="animalButtons">
-			<button type="button" class="starterGif" id="marmot">See MARMOT gifs</button>
-			<button type="button" class="starterGif" id="dik-dik">See DIK-DIK gifs</button>
-			<button type="button" class="starterGif" id="narwhal">See NARWHAL gifs</button>
+	<header>
+		<div class="crossbar">&nbsp</div>
+		<div id="slideshow">
+			<div>
+	     		<img src="assets/images/puppy.gif">
+	   		</div>
+	   		<div>
+	     		<img src="assets/images/sheep.gif">
+	   		</div>
+	   		<div>
+	     		<img src="assets/images/spider.gif">
+	   		</div>
 		</div>
-
-		<div id="formDiv">
-			<form id="animalForm">
-				<input type="text" id="animal-input" value=""><br>
-				<button type="submit" id="addAnimal">Add a critter</button>
-			</form>
+		<div>
+			<h1>GIF-a-CRIT!</h1>
+			<h2>A Giphy Search Engine</h2><br>
+			<p>Click a button below to see gifs based on that keyword.</p>
+			<p>Click each gif to animate or still.</p>
 		</div>
+	</header>
 
-		<div id="animalGifs"></div>
+	<div  id="animalButtons">
+		<button type="button" class="btn btn-primary starterGif" id="cat">See CAT gifs</button>
+		<button type="button" class="btn btn-primary starterGif" id="doberman">See DOBERMAN gifs</button>
+		<button type="button" class="btn btn-primary starterGif" id="narwhal">See BIRD gifs</button>
+	</div>
 
+	<div id="formDiv">
+		<p>Would you like to add your own custom buttons? Enter a creature name.</p>
+		<p>It doesn't have to be a creature, actually— it can be anything.</p>
+		<form id="animalForm">
+			<input type="text" id="animal-input" value=""><br>
+			<button class="btn btn-success" type="submit" id="addAnimal">Add a critter</button>
+		</form>
+	</div>
+
+	<div class="container" id="animalGifs"></div>
+
+	<footer class="footer navbar-fixed-bottom">
+		<p>Copyright 2018 <a href="http://jeffehartman.com">Jeff Hartman</a></p>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./assets/javascript/javascript.js"></script>
 
 </body>

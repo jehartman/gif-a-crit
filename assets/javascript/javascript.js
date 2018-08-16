@@ -1,8 +1,19 @@
 
-var animals = ["marmot", "dik-dik", "narwhal"];
+var animals = ["cat", "doberman", "bird"];
 var animal;
 
 $(document).ready(function() {
+
+  $("#slideshow > div:gt(0)").hide();
+
+  setInterval(function() { 
+    $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+  },  6000);
 
 //fetches gifs from giphy, pushes to html, and creates still/animate toggle
   function fetchGifs () {
@@ -14,14 +25,16 @@ $(document).ready(function() {
       }).done(function(response) {
         $("#animal-view").text(JSON.stringify(response));
         var results = response.data;
-        var animalDiv = $("<div class='animalImage'></div>");
-        $("#animalGifs").prepend(animalDiv);
+
+
 
         // push to array and push to html with ratings
         for (i=0; i<results.length; i++) {
           var upperCaseRating = results[i].rating.toUpperCase();
           var r = ("<p>Rating: " + upperCaseRating + "</p>");
+          var animalDiv = $("<div class='animalImage'></div>");
           $(animalDiv).append(r);
+          $("#animalGifs").prepend(animalDiv);
           var fixedHeight = results[i].images.fixed_height.url;
           var fixedHeightStill = results[i].images.fixed_height_still.url;
           var animalImage = $("<img src=" + fixedHeightStill + " data-still=" + fixedHeightStill + " data-animate=" + fixedHeight +" data-state='still' class='gif'>");
@@ -55,7 +68,7 @@ $(document).ready(function() {
     //creates dedicated animal gif button
     function createButton () {
       animal = animal.toUpperCase ();
-      $("#animalButtons").append("<button type='button' class='starterGif' id='" + animal.toLowerCase() +"'>" + "See " + animal + " gifs</button>");
+      $("#animalButtons").append("<button type='button' class='btn btn-primary' id='" + animal.toLowerCase() +"'>" + "See " + animal + " gifs</button>");
       animals.push(animal);
     }
     createButton ();

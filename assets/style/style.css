@@ -1,13 +1,16 @@
-/*Organization alphabetical by
+/*Organization alphabetically by
 ELEMENT
 CLASS
 ID*/
 
 /***********ELEMENTS***********/
 
+
 body {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Do Hyeon', sans-serif;
   font-size: 1.2em;
+  background: linear-gradient(#4abdac, #daf1ee);
+  min-height: 100%;
 }
 
 button {
@@ -15,9 +18,8 @@ button {
   height: 40px;
   margin: 10px 10px;
   padding: 5px 10px;
-  background-color: #13480D;
   text-align: center;
-  color: #E9F08F;
+  font-weight: 600;
 }
 
 div {
@@ -25,21 +27,37 @@ div {
   text-align: center;
 }
 
-h1  {
-  margin: 10px 30px;
-  padding: 20px;
-  height: 70px;
-  background-color: #E9F08F;
-  color: #262807;
+footer {
+  margin: 100px 30px 0px 30px;
+  padding: 15px;
+  font-size: .7em;
   text-align: center;
-  font-family: 'Fontdiner Swanky', cursive;
+  background-color: #ca6e7b;
+/*  box-shadow: 10px 10px 5px grey;*/
+/*  border-radius: 10px;*/
+/*  position: relative;*/
+/*  bottom: 0;*/
+  border-top: 1px solid black;
+}
+
+h1  {
+  margin: 5px 30px 0 30px;
+  padding: 0 20px 0 20px;
+/*  height: 70px;*/
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
   font-size: 2em;
-  border: 2px solid black;
   letter-spacing: 2px;
 }
 
-header {
-  margin: 10px 40px;
+html {
+  min-height: 100%;
+}
+
+img {
+  margin: 10px 0 40px 0;
+  border: 4px white solid;
+  box-shadow: 10px 10px 5px grey;
 }
 
 input {
@@ -47,54 +65,66 @@ input {
   padding: 5px 10px;
 }
 
-img {
-  margin: 10px 0 40px 0;
-  border: 4px white solid;
+input:focus {
+    border-color: #fd9275;
 }
+
+p {
+  padding: 2px;
+}
+
 
 /***********CLASSES***********/
 
-.instructions {
-  color: #262807;
-  background-color: #E9F08F;
-  padding: 10px 50px;
-  line-height: 25px;
-  text-align: center;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.crossbar {
+  position: relative;
+  top: 50px;
+  background-color: #bd4a5b;
+  height: 70px;
+  box-shadow: 10px 10px 5px grey;
+  border-radius: 10px;
+
+
+/*  z-index: 1;*/
 }
 
 /***********IDs***********/
 
 #addAnimal {
-  position: relative;
   margin: 0px 10px;
-  background-color: #E9F08F;
   color: black;
-  border: 2px solid black;
 }
 
 #animalButtons {
   font-size: .8em;
-}
-
-#animalForm {
-  margin: auto;
-}
-
-#animalGifs {
-  display: flex;
-}
-
-#animal-input {
-    border: 2px solid black;
+  margin: 0 20%;
 }
 
 #formDiv {
   min-width: 250px;
-  text-align: center;
 }
 
-#instructionsDiv {
-  border: 2px solid black;
+#slideshow { 
+    margin: auto; 
+/*    position: relative; */
+    width: 500px; 
+    height: 150px; 
+    padding: 10px; 
+
 }
 
-
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+/*    bottom: 10px; */
+    z-index: 1;
+}
